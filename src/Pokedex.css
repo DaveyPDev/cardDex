@@ -1,0 +1,33 @@
+.pokedex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(25% - 32px), 1fr));
+    gap: 16px;
+    min-width: 740px;
+  }
+  
+  .dexCard {
+    box-sizing: border-box;
+    max-width: 200px;
+  }
+  
+  /* will need to come back to resizing later 
+  trying to go from 4 columns to 3 and stop at 2
+  */
+  @media (max-width: 880px) {
+    .pokedex {
+      grid-template-columns: repeat(auto-fill, minmax(calc(33.33% - 32px), 1fr)); /* 3 columns */
+    }
+  }
+  
+  @media (max-width: 540px) {
+    .pokedex {
+      grid-template-columns: repeat(auto-fill, minmax(calc(50% - 16px), 1fr)); /* 2 columns */
+    }
+  }
+  
+  @media (max-width: 120px) {
+    .pokedex {
+      grid-template-columns: repeat(auto-fill, minmax(calc(100% - 16px), 1fr)); /* 1 column */
+    }
+  }
+  
